@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery-3.2.1.js"></script>
+  <meta charset="utf-8">
+  <title>exercice 3</title>
+</head>
+<body>
+  <button type="button" name="button">Entre un nombre entre 0 et 100</button>
+  <input type="text" id="number">
+  <script>
+  //Attend que le script charge
+  $(function(){
+    //Le chiffre à trouver
+    var answer = 68;
+    //On récupère la valeur inscrit dans l'input grace à l'id
+    var valeur = $('#number').val();
+    //En cliquant sur le bouton faire (function)...
+    $('button').click (function() {
+      // Valeur du nombre écrit + 1 (nombre de clic)
+      valeur++
+      // Si le nombre est inférieur à la réponse 68
+        if ($('#number').val() < answer ) {
+          //écrire plus
+          alert('Plus !');
+          //Si c'est supérieur ...
+        } else if ($('#number').val() > answer) {
+          alert('Moins !');
+          // Sinon écrire ...
+        } else {
+          alert('Correcte ! \nVous avez cliqué ' + valeur + ' fois' );
+        }
+    });
+  });
+  </script>
+</body>
+</html>
